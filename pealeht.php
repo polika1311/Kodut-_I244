@@ -6,13 +6,41 @@
 <title> Minu testimised </title>
 
 <body>
-<h1>Jupiter</h1>
+<ul>
+  
+  <li>
+    <a href="Galery.php">Galerii</a>
+  </li>
+  <li>
+    <a href="Pilt1.php">Esimene pilt</a>
+  </li>
+  <li>
+    <a href="Pilt2.php">Teine pilt</a>
+  </li>
+  <li>
+    <a href="Sisselogimine.php">Siselogimine</a>
+  </li>
+  <li>
+    <a href="registreerimine.php">Registreerimine</a>
+  </li>
+  <li>
+    <a href="Ules.php">Üleslaadimine</a>
+  </li>
+</ul>
 
- <form action="demo_form.asp" method="get">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br>
-  <input type="submit" value="Submit">
-</form> 
+Welcome <?php echo $_POST["kasutaja"]; ?><br>
+Sinu parool on: <?php echo $_POST["parool"]; ?><br>
+Sinu parool on: <?php echo $_POST["parool1"]; ?><br>
+
+Pealkiri: <?php echo $_POST["pealkiri"]; ?><br>
+Autor: <?php echo $_POST["autor"]; ?><br>
+
+
+
+        
+<a href = Galery.php>
+<h1>Galerii</h1>
+</a>
 
 <br/>
 <p><b>Jupiter </b> on Päikesest kauguselt viies planeet ja Päikesesüsteemi kõige suurem planeet. Hiidplaneet Jupiter ületab kõigi teiste planeetide kogumassi umbes kaks ja pool korda. Päikese massist on Jupiteri mass ligikaudu 1000 korda väiksem. Astronoomid teavad Jupiteri juba antiikajast.[1] Roomlased panid sellele nime oma jumala Jupiteri järgi. Maa pealt vaadatuna võib Jupiteri tähesuurus olla kuni ?2,94, mis on piisavalt hele, et jätta varje.[2] Kuu ja Veenuse järel on Jupiter heleduselt kolmas taevakeha. (Opositsiooni ajal võib Marss paista lühikest aega sama hele kui Jupiter.)
