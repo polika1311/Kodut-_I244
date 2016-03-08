@@ -1,0 +1,57 @@
+<style>
+body{
+	background:brown;
+}
+.sisu{
+	max-width:1000px;
+	min-width:600px;
+	width:400px;
+	margin:auto;
+	width:350px;
+	background:white;
+	position:relative;
+	padding:10px;
+	
+}
+
+
+#img1{
+    border: 5px solid red;
+    float:right;
+}
+#img1:hover{
+    border: 5px solid green;
+}
+
+#list{
+	width:20%;
+	background:brown;
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+  }
+  #menu li{
+	  width:20%;
+	  list-style:none;
+  }
+#menu a {
+	list-style-type: upper-roman;
+  width:150px;
+padding:15px;
+  display:block;
+  color:black;
+  }
+ #tekst{
+	 margin-left:20%;
+ }
+#menu a:hover { 
+	font-size: 110%;
+	  background-color: yellow;
+	  display:inline-block;
+	  color:black;
+	  width: 120px; } 
+
+	   img:hover { 
+	  border:dashed black; }
+</style>
