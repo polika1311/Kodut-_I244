@@ -1,0 +1,30 @@
+<?php
+
+//kontrollime kasutaja valiku
+if (!empty($_POST)) { 
+$errors=array();
+if (!empty($_POST["pildike"])){// pilt valitud
+	
+$errors[] = $_POST["pildike"];
+
+
+}
+
+}
+else{
+	$errors[]="valik puudu!";
+
+}
+
+?>
+<h3>Valiku tulemus</h3>
+<?php if(!empty($errors)):?>
+	<?php foreach ($errors as $i):?>
+	<p style="color:green"><?php echo "Sa valisid pildi nr $i";?></p>
+	
+	<?php endforeach;?>
+	<?php endif;?>
+
+<?php
+require_once ("foot.html");
+?>
