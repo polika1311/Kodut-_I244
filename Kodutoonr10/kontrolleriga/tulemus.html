@@ -1,0 +1,26 @@
+﻿
+<a href="?mode=mainpage">Logi välja</a>
+
+<?php
+$errors=array();
+
+if(!empty($_POST["pildike"])) {
+			if (!empty($_SESSION["voted_for"])){
+				$_SESSION["voted_for"] = $_POST["pildike"];
+				$errors[] = "Teie valik on tehtud";
+			} else {
+				$errors[] = "Sa juba tegid valiku";
+			}
+		}
+	 else {
+			if (!empty($_SESSION["voted_for"])){
+				$errors[] = "Palun vali pilt!";
+			} 
+	}
+?>
+<h3>Valiku tulemus</h3>
+<?php if(!empty($errors)):?>
+	<?php foreach ($errors as $i):?>
+	<p style="color:green"><?php echo $i;?></p>	
+	<?php endforeach;?>
+	<?php endif;?>
