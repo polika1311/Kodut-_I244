@@ -1,0 +1,39 @@
+# tabeli loomine
+ 
+CREATE TABLE ppopova_loomaaed (
+        id integer PRIMARY KEY auto_increment,
+        nimi varchar(100) NOT NULL,
+        vanus integer DEFAULT 1,
+        liik varchar(250) NOT NULL,
+        puuri_nr  integer DEFAULT 1
+);                                      
+
+ # sisestamine
+ 
+INSERT INTO ppopova_loomaaed (nimi, vanus, liik, puuri_nr) VALUES 
+('Miisu', 2, 'kalad', 1), 
+('Ants', 5, 'linnud', 2), 
+('Gerli', 8, 'roomajad', 3), 
+('Kiisu', 4, 'putukad', 4), 
+('Toivo', 12, 'roomajad', 3), 
+('Jaak', 14, 'kalad', 1), 
+('Musi', 9, 'linnud', 2), 
+('Krissu', 50, 'putukad', 4), 
+('Kaarel', 28, 'roomajad', 3), 
+('Ants', 15, 'putukad', 4);
+
+#päringud
+SELECT * FROM ppopova_loomaaed  nimi  ORDER BY puuri_nr ASC; 
+SELECT  max(vanus) as vanim FROM ppopova_loomaaed;
+SELECT  min(vanus) as noorim FROM ppopova_loomaaed;
+SELECT puuri_nr, count(*) as loomad FROM ppopova_loomaaed GROUP BY puuri_nr;
+UPDATE ppopova_loomaaed SET vanus =vanus+1;
+ 
+  
+ 
+    Koostada järgnevad päringud:
+Hankida kõigi mingis ühes kindlas puuris elavate loomade nimi ja puuri number
+Hankida vanima ja noorima looma vanused
+hankida puuri number koos selles elavate loomade arvuga (vihjeks: group by ja count )
+suurendada kõiki tabelis olevaid vanuseid 1 aasta võrra
+NB! iga punkti kohta 1 päring!
