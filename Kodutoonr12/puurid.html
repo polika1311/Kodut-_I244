@@ -6,19 +6,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
  </head>
 <body>
-<div>
-<?php foreach($puurid as $e => $puur):?>
-	Puuri number on: <?php echo $e; ?> <br/>
-	
-
-	Puuris on: 
-
-	<?php foreach($puur as $i => $loom): ?>
-<img src="<?php echo $loom["liik"];?>" alt="<?php echo $loom["nimi"]; ?>"/>
-<?php endforeach; ?>
-	
-<?php echo $loom ["nimi"];?>
-	</div>
+<?php if (!empty($puurid)):?>
+	<?php foreach($puurid as $pid=>$puur): ?>
+		<div class="puur">
+			<h5>Puur <?php echo $pid; ?></h5>
+			<?php foreach($puur as $lid=>$loom): ?>
+				<img src="<?php echo $loom['liik']; ?>" alt="<?php echo $loom['nimi']; ?>" title="<?php echo $loom['nimi']; ?>">
+			<?php endforeach; ?>
+		</div>
 	<?php endforeach; ?>
+<?php endif;?>
 	</body>
 </html>
