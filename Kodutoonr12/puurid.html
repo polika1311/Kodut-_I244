@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset = "utf-8" /> 
+    <title>Puurid</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+<body>
+<div>
+<?php foreach($puurid as $e => $puur):?>
+	Puuri number on: <?php echo $e; ?> <br/>
+	
+
+	Puuris on: 
+
+	<?php foreach($puur as $i => $loom): ?>
+<img src="<?php echo $loom["liik"];?>" alt="<?php echo $loom["nimi"]; ?>"/>
+<?php endforeach; ?>
+	
+<?php echo $loom ["nimi"];?>
+	</div>
+	<?php endforeach; ?>
+	</body>
+</html>

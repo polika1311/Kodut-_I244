@@ -31,9 +31,3 @@ UPDATE ppopova_loomaaed SET vanus =vanus+1;
  
   
  
-    Koostada järgnevad päringud:
-Hankida kõigi mingis ühes kindlas puuris elavate loomade nimi ja puuri number
-Hankida vanima ja noorima looma vanused
-hankida puuri number koos selles elavate loomade arvuga (vihjeks: group by ja count )
-suurendada kõiki tabelis olevaid vanuseid 1 aasta võrra
-NB! iga punkti kohta 1 päring!
